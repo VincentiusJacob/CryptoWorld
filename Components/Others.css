@@ -1,0 +1,51 @@
+.statisticSection {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px;
+  color: black;
+}
+
+.eachStatContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.statisticBox {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 300px;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  padding: 8px;
+  padding-bottom: 18px;
+}
+
+.iconAndstats {
+  display: flex;
+  gap: 8px;
+}
+
+.datastats {
+  font-weight: bold;
+}
+
+.chartSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.selectedCoinContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 100%;
+}

@@ -1,0 +1,25 @@
+.exchangeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.searchExchangeBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchExchangeBox > Input {
+  width: 300px;
+
+  padding: 8px;
+  padding-left: 45px;
+}
+
+.searchExchangeBox .searchAvatar {
+  position: absolute;
+  z-index: 1;
+  left: 350px;
+}

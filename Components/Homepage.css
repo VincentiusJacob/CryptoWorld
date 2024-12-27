@@ -1,0 +1,30 @@
+.homeContainer {
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.header {
+    display:flex;
+    flex-direction: column;
+}
+.bodyTopic {
+    display:flex;
+    justify-content: space-between;
+}
+
+.latestNews {
+    display:flex;
+    justify-content: space-between;
+}
+
+.exchangeInfo {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cryptoData {
+    display:grid;
+    gap:24px;
+    grid-template-columns: auto auto auto;
+}

@@ -1,0 +1,23 @@
+.cryptoListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.searchCrypto {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchCrypto .searchAvatar {
+  position: absolute;
+  z-index: 1;
+  left: 350px;
+}
+.searchCrypto > Input {
+  width: 300px;
+
+  padding: 8px;
+  padding-left: 45px;
+}
