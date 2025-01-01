@@ -1,5 +1,6 @@
 import { Row, Col, Statistic, Typography } from "antd";
 import React from "react";
+import numeral from "numeral";
 import { Link } from "react-router-dom";
 import News from "../Components/News";
 import Exchange from "../Components/Exchange";
@@ -17,12 +18,17 @@ export default function Homepage() {
   const totalCrypto = globalStats?.total;
   const totalExchange = globalStats?.totalExchanges;
   const marketCap = globalStats?.totalMarketCap;
-  const Volume = globalStats?.total24hVolume;
+  const volume = globalStats?.total24hVolume;
   const totalMarket = globalStats?.totalMarkets;
 
   if (isFetching) {
     console.log("loading...");
   }
+
+  const formatNumber = (number) => {
+    return numeral(number).format("0.0a");
+  };
+
   return (
     <div className="homeContainer">
       <div className="header">
@@ -38,10 +44,16 @@ export default function Homepage() {
             <Statistic title="Total Exchanges" value={totalExchange} />{" "}
           </Col>
           <Col span={12}>
-            <Statistic title="Total Market Cap" value={marketCap} />{" "}
+            <Statistic
+              title="Total Market Cap"
+              value={marketCap && `$${formatNumber(marketCap)}`}
+            />{" "}
           </Col>
           <Col span={12}>
-            <Statistic title="Total 24h Volume" value={Volume} />{" "}
+            <Statistic
+              title="Total 24h Volume"
+              value={volume && `$${formatNumber(volume)}`}
+            />{" "}
           </Col>
           <Col span={12}>
             <Statistic title="Total Market" value={totalMarket} />{" "}
